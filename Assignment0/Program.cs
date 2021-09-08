@@ -4,9 +4,12 @@ namespace Assignment0
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Please type in a year to find out whether it's a leap year. Then hit [enter]:");
+            var line = Console.ReadLine();
+            int year = int.Parse(line.Trim());
+            Console.WriteLine(IsLeapYear(year) ? "yay" : "nay");
         }
 
         public static bool IsLeapYear(int year) {
